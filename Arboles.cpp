@@ -27,6 +27,24 @@ info_nodo<T>* CrearRaiz(const T &e){
 }
 
 template <class T>
+int Altura(info_nodo<T>* n){
+    if(n == nullptr){
+        return -1;
+    }else{
+        info_nodo<T>*aux;
+        int max = -1;
+        for(aux = n->hijoizq; aux != nullptr;
+            aux = aux->hermanodcha){
+                int h = Altura(aux);
+                if(h > max){
+                    max = h;
+                }
+        }
+        return max + 1;
+    }
+}
+
+template <class T>
 void Copiar(info_nodo<T>*s, info_nodo<T>* &d){
     if(s == nullptr){
         d = nullptr;
