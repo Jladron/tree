@@ -20,7 +20,7 @@ struct info_nodo{
     info_nodo<T> * hder;
 };
 
-//Tenemos una eficiencia promedio (log2(n)) y 0(n) para buscar una etiqueta
+//Tenemos una eficiencia promedio (log2(n)) y O(n) para buscar una etiqueta
 //búsqueda recursiva
 template <class T>
 info_nodo<T> * Buscar(info_nodo<T>*n, const T &x){
